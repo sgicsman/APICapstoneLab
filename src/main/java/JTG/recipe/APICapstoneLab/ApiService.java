@@ -12,7 +12,7 @@ public class ApiService {
 	
 	private RestTemplate restTemplate = new RestTemplate();
 
-	private RestTemplate restTemplateWithUserAgent;
+	//private RestTemplate restTemplateWithUserAgent;
 	
 //	public List<Card> drawCards(int count) {
 //		String url = "https://deckofcardsapi.com/api/deck/3l0483xpl21f/draw/?count=" + count;
@@ -28,6 +28,7 @@ public class ApiService {
 			.queryParam("app_key", "30dec420259202ca868638f285001cf2")
 			.queryParam("to", 10)
 			.toUriString();
+	System.out.println(url);
 	RecipeApiResponse response = restTemplate.getForObject(url, RecipeApiResponse.class);
 	return response.getHits();	
 
