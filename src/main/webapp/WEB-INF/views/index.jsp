@@ -11,7 +11,8 @@
 <p>Test</p>
 
 <c:forEach items="${hits}" var="hits">
-<p> ${hits.label}</p>
+<p> ${hits.recipes}</p>
+<p> ${hits.bookmarked}</p>
 </c:forEach>
 
 </body>

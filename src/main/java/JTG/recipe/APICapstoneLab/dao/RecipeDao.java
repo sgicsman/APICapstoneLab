@@ -8,7 +8,7 @@ import javax.transaction.Transactional;
 
 import org.springframework.stereotype.Repository;
 
-import grandcircus.labs.CoffeeShopApp.Item;
+import JTG.recipe.APICapstoneLab.entity.RecipeApiResponse;
 
 @Repository
 @Transactional
@@ -17,13 +17,13 @@ public class RecipeDao {
 	@PersistenceContext
 	private EntityManager em;
 	
-	public List<Item> findAll() {
-		return em.createQuery("FROM Item", Item.class).getResultList();
+	public List<RecipeApiResponse> findAll() {
+		return em.createQuery("FROM RecipeSQL", RecipeApiResponse.class).getResultList();
 	}
 	
-	public Item findById(Long id) {
-		return em.find(Item.class, id);
-	}
+//	public  findById(Long id) {
+//		return em.find(.class, id);
+//	}
 		
 
 

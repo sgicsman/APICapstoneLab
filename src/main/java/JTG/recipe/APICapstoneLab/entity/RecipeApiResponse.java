@@ -4,15 +4,20 @@ import java.util.List;
 
 public class RecipeApiResponse {
 	
-	public List <RecipeApi> hits;
-
-	public List<RecipeApi> getHits() {
+	private Integer count;
+	public List <Hits> hits;
+	public Integer getCount() {
+		return count;
+	}
+	public void setCount(Integer count) {
+		this.count = count;
+	}
+	public List<Hits> getHits() {
 		return hits;
 	}
-
-	public void setHits(List<RecipeApi> hits) {
+	public void setHits(List<Hits> hits) {
 		this.hits = hits;
 	}
-
+	
 
 }

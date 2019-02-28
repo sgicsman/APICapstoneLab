@@ -2,12 +2,15 @@ package JTG.recipe.APICapstoneLab;
 
 import java.util.List;
 
+import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.web.util.UriComponentsBuilder;
 
-import JTG.recipe.APICapstoneLab.entity.RecipeApi;
+import JTG.recipe.APICapstoneLab.entity.Hits;
+
 import JTG.recipe.APICapstoneLab.entity.RecipeApiResponse;
 
+@Component
 public class ApiService {
 	
 	private RestTemplate restTemplate = new RestTemplate();
@@ -21,7 +24,7 @@ public class ApiService {
 //
 //		return response.getCards();
 //	}
-	public List<RecipeApi> getRecipeApiResponse(String query) {
+	public List<Hits> getRecipeApiResponse(String query) {
 	String url = UriComponentsBuilder.fromHttpUrl("https://api.edamam.com/search")
 			.queryParam("q", query)
 			.queryParam("app_id", "6b761d3c")
