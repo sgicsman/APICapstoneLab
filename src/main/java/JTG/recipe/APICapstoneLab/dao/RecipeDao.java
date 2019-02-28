@@ -1,4 +1,4 @@
-package JTG.recipe.APICapstoneLab;
+package JTG.recipe.APICapstoneLab.dao;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
